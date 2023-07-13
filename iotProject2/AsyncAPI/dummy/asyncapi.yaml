@@ -1,0 +1,48 @@
+asyncapi: '2.6.0'
+info:
+  title: SensorDummy
+  version: 1.0.0
+  description: This service is in charge of reading data from fish pond
+  license:
+    name: Apache 2.0
+    url: 'https://www.apache.org/licenses/LICENSE-2.0'
+servers:
+  mosquitto:
+    url: mqtt://localhost
+    protocol: mqtt
+channels:
+  sensor_dummy/values:
+    subscribe:
+      summary: Publish data read from the csv file
+      operationId: sendRow
+      message:
+        #name: fishPondMessage #Dummy
+        $ref: '#/components/messages/fishPondMessage'
+components:
+  messages:
+    fishPondMessage:
+      payload:
+          type: object
+          properties:
+            created_at:
+              type: string
+            entry_id:
+              type: string
+            TEMPERATURE:
+              type: string
+            TURBIDITY:
+              type: string
+            DISOLVED OXYGEN:
+              type: string
+            pH:
+              type: string
+            AMMONIA:
+              type: string
+            NITRATE:
+              type: string
+            Population:
+              type: string
+            Length:
+              type: string
+            Weight:
+              type: string

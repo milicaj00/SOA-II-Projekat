@@ -1,0 +1,21 @@
+default:
+  app:
+    name: AnalyticsService
+    version: 1.0.0
+
+  broker:
+    mqtt:
+      url: mqtt://localhost
+      topics: ["sensor_dummy/values","eKuiper/anomalies/#"]
+      qos:
+      protocol: mqtt
+      retain:
+      subscribe: true
+
+development:
+
+test:
+
+staging:
+
+production:
