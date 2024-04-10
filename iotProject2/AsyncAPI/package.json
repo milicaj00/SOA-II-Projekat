@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@asyncapi/generator": "^1.10.9"
+  }
+}

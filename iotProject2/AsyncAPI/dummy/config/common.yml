@@ -1,0 +1,21 @@
+default:
+  app:
+    name: SensorDummy
+    version: 1.0.0
+
+  broker:
+    mqtt:
+      url: mqtt://localhost
+      topics: []
+      qos:
+      protocol: mqtt
+      retain:
+      subscribe: true
+
+development:
+
+test:
+
+staging:
+
+production:
